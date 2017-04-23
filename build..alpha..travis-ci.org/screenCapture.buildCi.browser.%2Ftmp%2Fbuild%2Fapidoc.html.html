@@ -1,0 +1,3956 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/beaugunderson/ip-address#readme">ip-address (v5.8.8)</a>
+</h1>
+<h4>A library for parsing IPv4 and IPv6 IP addresses in node and the browser.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ip-address">module ip-address</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4">
+            function <span class="apidocSignatureSpan">ip-address.</span>Address4
+            <span class="apidocSignatureSpan">(address)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6">
+            function <span class="apidocSignatureSpan">ip-address.</span>Address6
+            <span class="apidocSignatureSpan">(address, optionalGroups)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ip-address.</span>Address4.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ip-address.</span>Address6.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ip-address.</span>attributes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ip-address.</span>common</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ip-address.</span>helpers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ip-address.</span>html</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ip-address.</span>regular_expressions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">ip-address.</span>v6</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ip-address.Address4">module ip-address.Address4</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.Address4">
+            function <span class="apidocSignatureSpan">ip-address.</span>Address4
+            <span class="apidocSignatureSpan">(address)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.fromBigInteger">
+            function <span class="apidocSignatureSpan">ip-address.Address4.</span>fromBigInteger
+            <span class="apidocSignatureSpan">(bigInteger)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.fromHex">
+            function <span class="apidocSignatureSpan">ip-address.Address4.</span>fromHex
+            <span class="apidocSignatureSpan">(hex)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.fromInteger">
+            function <span class="apidocSignatureSpan">ip-address.Address4.</span>fromInteger
+            <span class="apidocSignatureSpan">(integer)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ip-address.Address4.prototype">module ip-address.Address4.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.bigInteger">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>bigInteger
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.binaryZeroPad">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>binaryZeroPad
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.correctForm">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>correctForm
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.endAddress">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>endAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.getBitsBase2">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>getBitsBase2
+            <span class="apidocSignatureSpan">(start, end)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.isCorrect">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>isCorrect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.isInSubnet">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>isInSubnet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.isValid">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>isValid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.mask">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>mask
+            <span class="apidocSignatureSpan">(optionalMask)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.parse">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>parse
+            <span class="apidocSignatureSpan">(address)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.startAddress">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>startAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.toArray">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>toArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.toGroup6">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>toGroup6
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.toHex">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>toHex
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address4.prototype.toV6Group">
+            function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>toV6Group
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ip-address.Address6">module ip-address.Address6</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.Address6">
+            function <span class="apidocSignatureSpan">ip-address.</span>Address6
+            <span class="apidocSignatureSpan">(address, optionalGroups)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.fromAddress4">
+            function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromAddress4
+            <span class="apidocSignatureSpan">(address4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.fromArpa">
+            function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromArpa
+            <span class="apidocSignatureSpan">(arpaFormAddress)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.fromBigInteger">
+            function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromBigInteger
+            <span class="apidocSignatureSpan">(bigInteger)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.fromByteArray">
+            function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromByteArray
+            <span class="apidocSignatureSpan">(bytes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.fromURL">
+            function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromURL
+            <span class="apidocSignatureSpan">(url)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.fromUnsignedByteArray">
+            function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromUnsignedByteArray
+            <span class="apidocSignatureSpan">(bytes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ip-address.Address6.prototype">module ip-address.Address6.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.bigInteger">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>bigInteger
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.binaryZeroPad">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>binaryZeroPad
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.canonicalForm">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>canonicalForm
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.correctForm">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>correctForm
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.decimal">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>decimal
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.endAddress">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>endAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.get6to4">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>get6to4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.getBits">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getBits
+            <span class="apidocSignatureSpan">(start, end)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.getBitsBase16">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getBitsBase16
+            <span class="apidocSignatureSpan">(start, end)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.getBitsBase2">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getBitsBase2
+            <span class="apidocSignatureSpan">(start, end)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.getBitsPastSubnet">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getBitsPastSubnet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.getScope">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getScope
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.getType">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getType
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.group">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>group
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.href">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>href
+            <span class="apidocSignatureSpan">(optionalPort)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.inspect6to4">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>inspect6to4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.inspectTeredo">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>inspectTeredo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.is4">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>is4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.is6to4">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>is6to4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.isCanonical">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isCanonical
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.isCorrect">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isCorrect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.isInSubnet">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isInSubnet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.isLinkLocal">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isLinkLocal
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.isLoopback">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isLoopback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.isMulticast">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isMulticast
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.isTeredo">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isTeredo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.isValid">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isValid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.link">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>link
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.mask">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>mask
+            <span class="apidocSignatureSpan">(optionalMask)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.microsoftTranscription">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>microsoftTranscription
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.parse">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>parse
+            <span class="apidocSignatureSpan">(address)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.parse4in6">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>parse4in6
+            <span class="apidocSignatureSpan">(address)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.possibleSubnets">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>possibleSubnets
+            <span class="apidocSignatureSpan">(optionalSubnetSize)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.regularExpression">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>regularExpression
+            <span class="apidocSignatureSpan">(optionalSubstring)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.regularExpressionString">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>regularExpressionString
+            <span class="apidocSignatureSpan">(optionalSubString)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.reverseForm">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>reverseForm
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.six2four">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>six2four
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.startAddress">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>startAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.teredo">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>teredo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.to4">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>to4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.to4in6">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>to4in6
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.to6to4">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>to6to4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.toByteArray">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>toByteArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.toUnsignedByteArray">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>toUnsignedByteArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.tov4">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>tov4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.Address6.prototype.v4inv6">
+            function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>v4inv6
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ip-address.attributes">module ip-address.attributes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.attributes.is4">
+            function <span class="apidocSignatureSpan">ip-address.attributes.</span>is4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.attributes.is6to4">
+            function <span class="apidocSignatureSpan">ip-address.attributes.</span>is6to4
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.attributes.isCanonical">
+            function <span class="apidocSignatureSpan">ip-address.attributes.</span>isCanonical
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.attributes.isCorrect">
+            function <span class="apidocSignatureSpan">ip-address.attributes.</span>isCorrect
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.attributes.isInSubnet">
+            function <span class="apidocSignatureSpan">ip-address.attributes.</span>isInSubnet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.attributes.isLinkLocal">
+            function <span class="apidocSignatureSpan">ip-address.attributes.</span>isLinkLocal
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.attributes.isLoopback">
+            function <span class="apidocSignatureSpan">ip-address.attributes.</span>isLoopback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.attributes.isMulticast">
+            function <span class="apidocSignatureSpan">ip-address.attributes.</span>isMulticast
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.attributes.isTeredo">
+            function <span class="apidocSignatureSpan">ip-address.attributes.</span>isTeredo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.attributes.isValid">
+            function <span class="apidocSignatureSpan">ip-address.attributes.</span>isValid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ip-address.common">module ip-address.common</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.common.falseIfInvalid">
+            function <span class="apidocSignatureSpan">ip-address.common.</span>falseIfInvalid
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.common.isCorrect">
+            function <span class="apidocSignatureSpan">ip-address.common.</span>isCorrect
+            <span class="apidocSignatureSpan">(defaultBits)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.common.isInSubnet">
+            function <span class="apidocSignatureSpan">ip-address.common.</span>isInSubnet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ip-address.helpers">module ip-address.helpers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.helpers.simpleGroup">
+            function <span class="apidocSignatureSpan">ip-address.helpers.</span>simpleGroup
+            <span class="apidocSignatureSpan">(addressString, offset)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.helpers.spanAll">
+            function <span class="apidocSignatureSpan">ip-address.helpers.</span>spanAll
+            <span class="apidocSignatureSpan">(s, optionalOffset)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.helpers.spanAllZeroes">
+            function <span class="apidocSignatureSpan">ip-address.helpers.</span>spanAllZeroes
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.helpers.spanLeadingZeroes">
+            function <span class="apidocSignatureSpan">ip-address.helpers.</span>spanLeadingZeroes
+            <span class="apidocSignatureSpan">(address)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ip-address.html">module ip-address.html</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.html.group">
+            function <span class="apidocSignatureSpan">ip-address.html.</span>group
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.html.href">
+            function <span class="apidocSignatureSpan">ip-address.html.</span>href
+            <span class="apidocSignatureSpan">(optionalPort)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.html.link">
+            function <span class="apidocSignatureSpan">ip-address.html.</span>link
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.ip-address.regular_expressions">module ip-address.regular_expressions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.regular_expressions.regularExpression">
+            function <span class="apidocSignatureSpan">ip-address.regular_expressions.</span>regularExpression
+            <span class="apidocSignatureSpan">(optionalSubstring)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.ip-address.regular_expressions.regularExpressionString">
+            function <span class="apidocSignatureSpan">ip-address.regular_expressions.</span>regularExpressionString
+            <span class="apidocSignatureSpan">(optionalSubString)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ip-address" id="apidoc.module.ip-address">module ip-address</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4" id="apidoc.element.ip-address.Address4">
+        function <span class="apidocSignatureSpan">ip-address.</span>Address4
+        <span class="apidocSignatureSpan">(address)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Address4(address) {
+  this.valid = false;
+  this.address = address;
+  this.groups = constants.GROUPS;
+
+  this.v4 = true;
+
+  this.subnet = '/32';
+  this.subnetMask = 32;
+
+  var subnet = constants.RE_SUBNET_STRING.exec(address);
+
+  if (subnet) {
+    this.parsedSubnet = subnet[0].replace('/', '');
+    this.subnetMask = parseInt(this.parsedSubnet, 10);
+    this.subnet = '/' + this.subnetMask;
+
+    if (this.subnetMask &lt; 0 || this.subnetMask &gt; constants.BITS) {
+      this.valid = false;
+      this.error = 'Invalid subnet mask.';
+
+      return;
+    }
+
+    address = address.replace(constants.RE_SUBNET_STRING, '');
+  }
+
+  this.addressMinusSuffix = address;
+
+  this.parsedAddress = this.parse(address);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6" id="apidoc.element.ip-address.Address6">
+        function <span class="apidocSignatureSpan">ip-address.</span>Address6
+        <span class="apidocSignatureSpan">(address, optionalGroups)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Address6(address, optionalGroups) {
+  if (optionalGroups === undefined) {
+    this.groups = constants6.GROUPS;
+  } else {
+    this.groups = optionalGroups;
+  }
+
+  this.v4 = false;
+
+  this.subnet = '/128';
+  this.subnetMask = 128;
+
+  this.zone = '';
+
+  this.address = address;
+
+  var subnet = constants6.RE_SUBNET_STRING.exec(address);
+
+  if (subnet) {
+    this.parsedSubnet = subnet[0].replace('/', '');
+    this.subnetMask = parseInt(this.parsedSubnet, 10);
+    this.subnet = '/' + this.subnetMask;
+
+    if (isNaN(this.subnetMask) ||
+      this.subnetMask &lt; 0 ||
+      this.subnetMask &gt; constants6.BITS) {
+      this.valid = false;
+      this.error = 'Invalid subnet mask.';
+
+      return;
+    }
+
+    address = address.replace(constants6.RE_SUBNET_STRING, '');
+  } else if (/\//.test(address)) {
+    this.valid = false;
+    this.error = 'Invalid subnet mask.';
+
+    return;
+  }
+
+  var zone = constants6.RE_ZONE_STRING.exec(address);
+
+  if (zone) {
+    this.zone = zone[0];
+
+    address = address.replace(constants6.RE_ZONE_STRING, '');
+  }
+
+  this.addressMinusSuffix = address;
+
+  this.parsedAddress = this.parse(this.addressMinusSuffix);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ip-address.Address4" id="apidoc.module.ip-address.Address4">module ip-address.Address4</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.Address4" id="apidoc.element.ip-address.Address4.Address4">
+        function <span class="apidocSignatureSpan">ip-address.</span>Address4
+        <span class="apidocSignatureSpan">(address)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Address4(address) {
+  this.valid = false;
+  this.address = address;
+  this.groups = constants.GROUPS;
+
+  this.v4 = true;
+
+  this.subnet = '/32';
+  this.subnetMask = 32;
+
+  var subnet = constants.RE_SUBNET_STRING.exec(address);
+
+  if (subnet) {
+    this.parsedSubnet = subnet[0].replace('/', '');
+    this.subnetMask = parseInt(this.parsedSubnet, 10);
+    this.subnet = '/' + this.subnetMask;
+
+    if (this.subnetMask &lt; 0 || this.subnetMask &gt; constants.BITS) {
+      this.valid = false;
+      this.error = 'Invalid subnet mask.';
+
+      return;
+    }
+
+    address = address.replace(constants.RE_SUBNET_STRING, '');
+  }
+
+  this.addressMinusSuffix = address;
+
+  this.parsedAddress = this.parse(address);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.fromBigInteger" id="apidoc.element.ip-address.Address4.fromBigInteger">
+        function <span class="apidocSignatureSpan">ip-address.Address4.</span>fromBigInteger
+        <span class="apidocSignatureSpan">(bigInteger)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromBigInteger = function (bigInteger) {
+  return Address4.fromInteger(parseInt(bigInteger.toString(), 10));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.fromHex" id="apidoc.element.ip-address.Address4.fromHex">
+        function <span class="apidocSignatureSpan">ip-address.Address4.</span>fromHex
+        <span class="apidocSignatureSpan">(hex)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromHex = function (hex) {
+  var padded = padStart(hex.replace(/:/g, ''), 8, '0');
+  var groups = [];
+  var i;
+
+  for (i = 0; i &lt; 8; i += 2) {
+    var h = padded.slice(i, i + 2);
+
+    groups.push(parseInt(h, 16));
+  }
+
+  return new Address4(groups.join('.'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.fromInteger" id="apidoc.element.ip-address.Address4.fromInteger">
+        function <span class="apidocSignatureSpan">ip-address.Address4.</span>fromInteger
+        <span class="apidocSignatureSpan">(integer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromInteger = function (integer) {
+  return Address4.fromHex(integer.toString(16));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ip-address.Address4.prototype" id="apidoc.module.ip-address.Address4.prototype">module ip-address.Address4.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.bigInteger" id="apidoc.element.ip-address.Address4.prototype.bigInteger">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>bigInteger
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bigInteger = function () {
+  if (!this.valid) {
+    return null;
+  }
+
+  return new BigInteger(this.parsedAddress.map(function (n) {
+    return sprintf('%02x', parseInt(n, 10));
+  }).join(''), 16);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.binaryZeroPad" id="apidoc.element.ip-address.Address4.prototype.binaryZeroPad">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>binaryZeroPad
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">binaryZeroPad = function () {
+  return padStart(this.bigInteger().toString(2), constants.BITS, '0');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.correctForm" id="apidoc.element.ip-address.Address4.prototype.correctForm">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>correctForm
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">correctForm = function () {
+  return this.parsedAddress.map(function (part) {
+    return parseInt(part, 10);
+  }).join('.');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  return false;
+});
+
+exports.isCorrect = function (defaultBits) {
+  return falseIfInvalid(function () {
+if (this.addressMinusSuffix !== this.<span class="apidocCodeKeywordSpan">correctForm</span>()) {
+  return false;
+}
+
+if (this.subnetMask === defaultBits &amp;&amp; !this.parsedSubnet) {
+  return true;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.endAddress" id="apidoc.element.ip-address.Address4.prototype.endAddress">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>endAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">endAddress = function () {
+  var endAddress = new BigInteger(this.mask() +
+    repeat(1, constants.BITS - this.subnetMask), 2);
+
+  return Address4.fromBigInteger(endAddress);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.getBitsBase2" id="apidoc.element.ip-address.Address4.prototype.getBitsBase2">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>getBitsBase2
+        <span class="apidocSignatureSpan">(start, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBitsBase2 = function (start, end) {
+  return this.binaryZeroPad().slice(start, end);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Returns true if the address is a link local address, false otherwise
+ * @memberof Address6
+ * @instance
+ * @returns {boolean}
+ */
+exports.isLinkLocal = common.falseIfInvalid(function () {
+  // Zeroes are required, i.e. we can't check isInSubnet with 'fe80::/10'
+  if (this.<span class="apidocCodeKeywordSpan">getBitsBase2</span>(0, 64) ===
+    '1111111010000000000000000000000000000000000000000000000000000000') {
+    return true;
+  }
+
+  return false;
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.isCorrect" id="apidoc.element.ip-address.Address4.prototype.isCorrect">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>isCorrect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isCorrect = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+* Returns true if the address is correct, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+exports.isCorrect = common.<span class="apidocCodeKeywordSpan">isCorrect</span>(v6.BITS);
+
+/**
+* Returns true if the address is in the canonical form, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.isInSubnet" id="apidoc.element.ip-address.Address4.prototype.isInSubnet">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>isInSubnet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isInSubnet = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* Returns true if the address is a Teredo address, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+exports.isTeredo = common.falseIfInvalid(function () {
+ return this.<span class="apidocCodeKeywordSpan">isInSubnet</span>(new this.constructor('2001::/32'));
+});
+
+/**
+* Returns true if the address is a 6to4 address, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.isValid" id="apidoc.element.ip-address.Address4.prototype.isValid">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>isValid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValid = function () {
+  return this.valid;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Examples
+
+```js
+var Address6 = require('ip-address').Address6;
+
+var address = new Address6('2001:0:ce49:7601:e866:efff:62c3:fffe');
+
+address.<span class="apidocCodeKeywordSpan">isValid</span>(); // true
+
+var teredo = address.inspectTeredo();
+
+teredo.client4;    // '157.60.0.1'
+```
+
+### Features
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.mask" id="apidoc.element.ip-address.Address4.prototype.mask">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>mask
+        <span class="apidocSignatureSpan">(optionalMask)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mask = function (optionalMask) {
+  if (optionalMask === undefined) {
+    optionalMask = this.subnetMask;
+  }
+
+  return this.getBitsBase2(0, optionalMask);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+exports.isInSubnet = falseIfInvalid(function (address) {
+  if (this.subnetMask &lt; address.subnetMask) {
+    return false;
+  }
+
+  if (this.<span class="apidocCodeKeywordSpan">mask</span>(address.subnetMask) === address.mask()) {
+    return true;
+  }
+
+  return false;
+});
+
+exports.isCorrect = function (defaultBits) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.parse" id="apidoc.element.ip-address.Address4.prototype.parse">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>parse
+        <span class="apidocSignatureSpan">(address)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (address) {
+  var groups = address.split('.');
+
+  if (address.match(constants.RE_ADDRESS)) {
+    this.valid = true;
+  } else {
+    this.error = 'Invalid IPv4 address.';
+  }
+
+  return groups;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.startAddress" id="apidoc.element.ip-address.Address4.prototype.startAddress">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>startAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startAddress = function () {
+  var startAddress = new BigInteger(this.mask() +
+    repeat(0, constants.BITS - this.subnetMask), 2);
+
+  return Address4.fromBigInteger(startAddress);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.toArray" id="apidoc.element.ip-address.Address4.prototype.toArray">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>toArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toArray = function () {
+  return this.parsedAddress.map(function (part) {
+    return parseInt(part, 10);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.toGroup6" id="apidoc.element.ip-address.Address4.prototype.toGroup6">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>toGroup6
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toGroup6 = function () {
+  var output = [];
+  var i;
+
+  for (i = 0; i &lt; constants.GROUPS; i += 2) {
+    var hex = sprintf('%02x%02x',
+      parseInt(this.parsedAddress[i], 10),
+      parseInt(this.parsedAddress[i + 1], 10));
+
+    output.push(sprintf('%x', parseInt(hex, 16)));
+  }
+
+  return output.join(':');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.toHex" id="apidoc.element.ip-address.Address4.prototype.toHex">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>toHex
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHex = function () {
+  return this.parsedAddress.map(function (part) {
+    return sprintf('%02x', parseInt(part, 10));
+  }).join(':');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address4.prototype.toV6Group" id="apidoc.element.ip-address.Address4.prototype.toV6Group">
+        function <span class="apidocSignatureSpan">ip-address.Address4.prototype.</span>toV6Group
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ip-address.Address6" id="apidoc.module.ip-address.Address6">module ip-address.Address6</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.Address6" id="apidoc.element.ip-address.Address6.Address6">
+        function <span class="apidocSignatureSpan">ip-address.</span>Address6
+        <span class="apidocSignatureSpan">(address, optionalGroups)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Address6(address, optionalGroups) {
+  if (optionalGroups === undefined) {
+    this.groups = constants6.GROUPS;
+  } else {
+    this.groups = optionalGroups;
+  }
+
+  this.v4 = false;
+
+  this.subnet = '/128';
+  this.subnetMask = 128;
+
+  this.zone = '';
+
+  this.address = address;
+
+  var subnet = constants6.RE_SUBNET_STRING.exec(address);
+
+  if (subnet) {
+    this.parsedSubnet = subnet[0].replace('/', '');
+    this.subnetMask = parseInt(this.parsedSubnet, 10);
+    this.subnet = '/' + this.subnetMask;
+
+    if (isNaN(this.subnetMask) ||
+      this.subnetMask &lt; 0 ||
+      this.subnetMask &gt; constants6.BITS) {
+      this.valid = false;
+      this.error = 'Invalid subnet mask.';
+
+      return;
+    }
+
+    address = address.replace(constants6.RE_SUBNET_STRING, '');
+  } else if (/\//.test(address)) {
+    this.valid = false;
+    this.error = 'Invalid subnet mask.';
+
+    return;
+  }
+
+  var zone = constants6.RE_ZONE_STRING.exec(address);
+
+  if (zone) {
+    this.zone = zone[0];
+
+    address = address.replace(constants6.RE_ZONE_STRING, '');
+  }
+
+  this.addressMinusSuffix = address;
+
+  this.parsedAddress = this.parse(this.addressMinusSuffix);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.fromAddress4" id="apidoc.element.ip-address.Address6.fromAddress4">
+        function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromAddress4
+        <span class="apidocSignatureSpan">(address4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromAddress4 = function (address4) {
+  var address4 = new Address4(address4);
+
+  var mask6 = constants6.BITS - (constants4.BITS - address4.subnetMask);
+
+  return new Address6('::ffff:' + address4.correctForm() + '/' + mask6);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.fromArpa" id="apidoc.element.ip-address.Address6.fromArpa">
+        function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromArpa
+        <span class="apidocSignatureSpan">(arpaFormAddress)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromArpa = function (arpaFormAddress) {
+  //remove ending ".ip6.arpa." or just "."
+  var address = arpaFormAddress.replace(/(\.ip6\.arpa)?\.$/, '');
+  var semicolonAmount = 7;
+
+  //correct ip6.arpa form with ending removed will be 63 characters
+  if (address.length !== 63) {
+    address = {
+      error: "Not Valid 'ip6.arpa' form",
+      address: null
+    };
+    return address;
+  }
+
+  address = address.split('.').reverse();
+
+  for (var i = semicolonAmount; i &gt; 0; i--) {
+    var insertIndex = i * 4;
+    address.splice(insertIndex, 0, ':');
+  }
+
+  address = address.join('');
+  return new Address6(address);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.fromBigInteger" id="apidoc.element.ip-address.Address6.fromBigInteger">
+        function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromBigInteger
+        <span class="apidocSignatureSpan">(bigInteger)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromBigInteger = function (bigInteger) {
+  var hex = padStart(bigInteger.toString(16), 32, '0');
+  var groups = [];
+  var i;
+
+  for (i = 0; i &lt; constants6.GROUPS; i++) {
+    groups.push(hex.slice(i * 4, (i + 1) * 4));
+  }
+
+  return new Address6(groups.join(':'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.fromByteArray" id="apidoc.element.ip-address.Address6.fromByteArray">
+        function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromByteArray
+        <span class="apidocSignatureSpan">(bytes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromByteArray = function (bytes) {
+  return this.fromUnsignedByteArray(bytes.map(unsignByte));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.fromURL" id="apidoc.element.ip-address.Address6.fromURL">
+        function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromURL
+        <span class="apidocSignatureSpan">(url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromURL = function (url) {
+  var host;
+  var port;
+  var result;
+
+  // If we have brackets parse them and find a port
+  if (url.indexOf('[') !== -1 &amp;&amp; url.indexOf(']:') !== -1) {
+    result = constants6.RE_URL_WITH_PORT.exec(url);
+
+    if (result === null) {
+      return {
+        error: 'failed to parse address with port',
+        address: null,
+        port: null
+      };
+    }
+
+    host = result[1];
+    port = result[2];
+  // If there's a URL extract the address
+  } else if (url.indexOf('/') !== -1) {
+    // Remove the protocol prefix
+    url = url.replace(/^[a-z0-9]+:\/\//, '');
+
+    // Parse the address
+    result = constants6.RE_URL.exec(url);
+
+    if (result === null) {
+      return {
+        error: 'failed to parse address from URL',
+        address: null,
+        port: null
+      };
+    }
+
+    host = result[1];
+  // Otherwise just assign the URL to the host and let the library parse it
+  } else {
+    host = url;
+  }
+
+  // If there's a port convert it to an integer
+  if (port) {
+    port = parseInt(port, 10);
+
+    //squelch out of range ports
+    if (port &lt; 0 || port &gt; 65536) {
+      port = null;
+    }
+  } else {
+    // Standardize `undefined` to `null`
+    port = null;
+  }
+
+  return {
+    address: new Address6(host),
+    port: port
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+teredo.client4;    // '157.60.0.1'
+```
+
+### Features
+
+- Parsing of all IPv6 notations
+- Parsing of IPv6 addresses and ports from URLs with `Address6.<span class="apidocCodeKeywordSpan">fromURL</span>(url)`
+- Validity checking
+- Decoding of the [Teredo
+information](http://en.wikipedia.org/wiki/Teredo_tunneling#IPv6_addressing)
+in an address
+- Whether one address is a valid subnet of another
+- What special properties a given address has (multicast prefix, unique
+local address prefix, etc.)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.fromUnsignedByteArray" id="apidoc.element.ip-address.Address6.fromUnsignedByteArray">
+        function <span class="apidocSignatureSpan">ip-address.Address6.</span>fromUnsignedByteArray
+        <span class="apidocSignatureSpan">(bytes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromUnsignedByteArray = function (bytes) {
+  var BYTE_MAX = new BigInteger('256', 10);
+  var result = new BigInteger('0', 10);
+  var multiplier = new BigInteger('1', 10);
+
+  for (var i = bytes.length - 1; i &gt;= 0; i--) {
+    result = result.add(
+      multiplier.multiply(new BigInteger(bytes[i].toString(10), 10)));
+
+    multiplier = multiplier.multiply(BYTE_MAX);
+  }
+
+  return Address6.fromBigInteger(result);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ip-address.Address6.prototype" id="apidoc.module.ip-address.Address6.prototype">module ip-address.Address6.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.bigInteger" id="apidoc.element.ip-address.Address6.prototype.bigInteger">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>bigInteger
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bigInteger = function () {
+  if (!this.valid) {
+    return null;
+  }
+
+  return new BigInteger(this.parsedAddress.map(paddedHex).join(''), 16);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.binaryZeroPad" id="apidoc.element.ip-address.Address6.prototype.binaryZeroPad">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>binaryZeroPad
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">binaryZeroPad = function () {
+  return padStart(this.bigInteger().toString(2), constants6.BITS, '0');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.canonicalForm" id="apidoc.element.ip-address.Address6.prototype.canonicalForm">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>canonicalForm
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">canonicalForm = function () {
+  if (!this.valid) {
+    return null;
+  }
+
+  return this.parsedAddress.map(paddedHex).join(':');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* Returns true if the address is in the canonical form, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+exports.isCanonical = common.falseIfInvalid(function () {
+ return this.addressMinusSuffix === this.<span class="apidocCodeKeywordSpan">canonicalForm</span>();
+});
+
+/**
+* Returns true if the address is a link local address, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.correctForm" id="apidoc.element.ip-address.Address6.prototype.correctForm">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>correctForm
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">correctForm = function () {
+  if (!this.parsedAddress) {
+    return null;
+  }
+
+  var i;
+  var groups = [];
+
+  var zeroCounter = 0;
+  var zeroes = [];
+
+  for (i = 0; i &lt; this.parsedAddress.length; i++) {
+    var value = parseInt(this.parsedAddress[i], 16);
+
+    if (value === 0) {
+      zeroCounter++;
+    }
+
+    if (value !== 0 &amp;&amp; zeroCounter &gt; 0) {
+      if (zeroCounter &gt; 1) {
+        zeroes.push([i - zeroCounter, i - 1]);
+      }
+
+      zeroCounter = 0;
+    }
+  }
+
+  // Do we end with a string of zeroes?
+  if (zeroCounter &gt; 1) {
+    zeroes.push([this.parsedAddress.length - zeroCounter,
+                 this.parsedAddress.length - 1]);
+  }
+
+  var zeroLengths = zeroes.map(function (n) {
+    return (n[1] - n[0]) + 1;
+  });
+
+  if (zeroes.length &gt; 0) {
+    var index = zeroLengths.indexOf(max(zeroLengths));
+
+    groups = compact(this.parsedAddress, zeroes[index]);
+  } else {
+    groups = this.parsedAddress;
+  }
+
+  for (i = 0; i &lt; groups.length; i++) {
+    if (groups[i] !== 'compact') {
+      groups[i] = parseInt(groups[i], 16).toString(16);
+    }
+  }
+
+  var correct = groups.join(':');
+
+  correct = correct.replace(/^compact$/, '::');
+  correct = correct.replace(/^compact|compact$/, ':');
+  correct = correct.replace(/compact/, '');
+
+  return correct;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  return false;
+});
+
+exports.isCorrect = function (defaultBits) {
+  return falseIfInvalid(function () {
+if (this.addressMinusSuffix !== this.<span class="apidocCodeKeywordSpan">correctForm</span>()) {
+  return false;
+}
+
+if (this.subnetMask === defaultBits &amp;&amp; !this.parsedSubnet) {
+  return true;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.decimal" id="apidoc.element.ip-address.Address6.prototype.decimal">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>decimal
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decimal = function () {
+  if (!this.valid) {
+    return null;
+  }
+
+  return this.parsedAddress.map(function (n) {
+    return sprintf('%05d', parseInt(n, 16));
+  }).join(':');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.endAddress" id="apidoc.element.ip-address.Address6.prototype.endAddress">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>endAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">endAddress = function () {
+  var endAddress = new BigInteger(this.mask() +
+    repeat(1, constants6.BITS - this.subnetMask), 2);
+
+  return Address6.fromBigInteger(endAddress);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.get6to4" id="apidoc.element.ip-address.Address6.prototype.get6to4">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>get6to4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.getBits" id="apidoc.element.ip-address.Address6.prototype.getBits">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getBits
+        <span class="apidocSignatureSpan">(start, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBits = function (start, end) {
+  return new BigInteger(this.getBitsBase2(start, end), 2);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.getBitsBase16" id="apidoc.element.ip-address.Address6.prototype.getBitsBase16">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getBitsBase16
+        <span class="apidocSignatureSpan">(start, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBitsBase16 = function (start, end) {
+  var length = end - start;
+
+  if (length % 4 !== 0) {
+    return null;
+  }
+
+  return padStart(this.getBits(start, end).toString(16), length / 4, '0');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.getBitsBase2" id="apidoc.element.ip-address.Address6.prototype.getBitsBase2">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getBitsBase2
+        <span class="apidocSignatureSpan">(start, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBitsBase2 = function (start, end) {
+  return this.binaryZeroPad().slice(start, end);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * Returns true if the address is a link local address, false otherwise
+ * @memberof Address6
+ * @instance
+ * @returns {boolean}
+ */
+exports.isLinkLocal = common.falseIfInvalid(function () {
+  // Zeroes are required, i.e. we can't check isInSubnet with 'fe80::/10'
+  if (this.<span class="apidocCodeKeywordSpan">getBitsBase2</span>(0, 64) ===
+    '1111111010000000000000000000000000000000000000000000000000000000') {
+    return true;
+  }
+
+  return false;
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.getBitsPastSubnet" id="apidoc.element.ip-address.Address6.prototype.getBitsPastSubnet">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getBitsPastSubnet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBitsPastSubnet = function () {
+  return this.getBitsBase2(this.subnetMask, constants6.BITS);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.getScope" id="apidoc.element.ip-address.Address6.prototype.getScope">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getScope
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getScope = function () {
+  var scope = constants6.SCOPES[this.getBits(12, 16)];
+
+  if (this.getType() === 'Global unicast' &amp;&amp;
+      scope !== 'Link local') {
+    scope = 'Global';
+  }
+
+  return scope;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.getType" id="apidoc.element.ip-address.Address6.prototype.getType">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>getType
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getType = function () {
+  var self = this;
+
+  function isType(name, type) {
+    return self.isInSubnet(new Address6(type));
+  }
+
+  return find(constants6.TYPES, isType) || 'Global unicast';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* Returns true if the address is a multicast address, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+exports.isMulticast = common.falseIfInvalid(function () {
+ return this.<span class="apidocCodeKeywordSpan">getType</span>() === 'Multicast';
+});
+
+/**
+* Returns true if the address is a v4-in-v6 address, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.group" id="apidoc.element.ip-address.Address6.prototype.group">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>group
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">group = function () {
+  var address4 = this.address.match(constants4.RE_ADDRESS);
+  var i;
+
+  if (address4) {
+    // The IPv4 case
+    var segments = address4[0].split('.');
+
+    this.address = this.address.replace(constants4.RE_ADDRESS,
+      sprintf('&lt;span class="hover-group group-v4 group-6"&gt;%s&lt;/span&gt;' +
+        '.' +
+        '&lt;span class="hover-group group-v4 group-7"&gt;%s&lt;/span&gt;',
+        segments.slice(0, 2).join('.'),
+        segments.slice(2, 4).join('.')));
+  }
+
+  if (this.elidedGroups === 0) {
+    // The simple case
+    return helpers.simpleGroup(this.address);
+  }
+
+  // The elided case
+  var output = [];
+
+  var halves = this.address.split('::');
+
+  if (halves[0].length) {
+    output.push(helpers.simpleGroup(halves[0]));
+  } else {
+    output.push('');
+  }
+
+  var classes = ['hover-group'];
+
+  for (i = this.elisionBegin;
+       i &lt; this.elisionBegin + this.elidedGroups; i++) {
+    classes.push(sprintf('group-%d', i));
+  }
+
+  output.push(sprintf('&lt;span class="%s"&gt;&lt;/span&gt;', classes.join(' ')));
+
+  if (halves[1].length) {
+    output.push(helpers.simpleGroup(halves[1], this.elisionEnd));
+  } else {
+    output.push('');
+  }
+
+  return output.join(':');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.href" id="apidoc.element.ip-address.Address6.prototype.href">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>href
+        <span class="apidocSignatureSpan">(optionalPort)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">href = function (optionalPort) {
+  if (optionalPort === undefined) {
+    optionalPort = '';
+  } else {
+    optionalPort = sprintf(':%s', optionalPort);
+  }
+
+  return sprintf('http://[%s]%s/', this.correctForm(), optionalPort);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.inspect6to4" id="apidoc.element.ip-address.Address6.prototype.inspect6to4">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>inspect6to4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inspect6to4 = function () {
+<span class="apidocCodeCommentSpan">  /*
+  - Bits 0 to 15 are set to the 6to4 prefix (2002::/16).
+  - Bits 16 to 48 embed the IPv4 address of the 6to4 gateway that is used.
+  */
+</span>
+  var prefix = this.getBitsBase16(0, 16);
+
+  var gateway = Address4.fromHex(this.getBitsBase16(16, 48));
+
+  return {
+    prefix: sprintf('%s', prefix.slice(0, 4)),
+    gateway: gateway.address
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.inspectTeredo" id="apidoc.element.ip-address.Address6.prototype.inspectTeredo">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>inspectTeredo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inspectTeredo = function () {
+<span class="apidocCodeCommentSpan">  /*
+  - Bits 0 to 31 are set to the Teredo prefix (normally 2001:0000::/32).
+  - Bits 32 to 63 embed the primary IPv4 address of the Teredo server that
+    is used.
+  - Bits 64 to 79 can be used to define some flags. Currently only the
+    higher order bit is used; it is set to 1 if the Teredo client is
+    located behind a cone NAT, 0 otherwise. For Microsoft's Windows Vista
+    and Windows Server 2008 implementations, more bits are used. In those
+    implementations, the format for these 16 bits is "CRAAAAUG AAAAAAAA",
+    where "C" remains the "Cone" flag. The "R" bit is reserved for future
+    use. The "U" bit is for the Universal/Local flag (set to 0). The "G" bit
+    is Individual/Group flag (set to 0). The A bits are set to a 12-bit
+    randomly generated number chosen by the Teredo client to introduce
+    additional protection for the Teredo node against IPv6-based scanning
+    attacks.
+  - Bits 80 to 95 contains the obfuscated UDP port number. This is the
+    port number that is mapped by the NAT to the Teredo client with all
+    bits inverted.
+  - Bits 96 to 127 contains the obfuscated IPv4 address. This is the
+    public IPv4 address of the NAT with all bits inverted.
+  */
+</span>  var prefix = this.getBitsBase16(0, 32);
+
+  var udpPort = this.getBits(80, 96).xor(new BigInteger('ffff', 16)).toString();
+
+  var server4 = Address4.fromHex(this.getBitsBase16(32, 64));
+  var client4 = Address4.fromHex(this.getBits(96, 128)
+    .xor(new BigInteger('ffffffff', 16)).toString(16));
+
+  var flags = this.getBits(64, 80);
+  var flagsBase2 = this.getBitsBase2(64, 80);
+
+  var coneNat = flags.testBit(15);
+  var reserved = flags.testBit(14);
+  var groupIndividual = flags.testBit(8);
+  var universalLocal = flags.testBit(9);
+  var nonce = new BigInteger(flagsBase2.slice(2, 6) +
+    flagsBase2.slice(8, 16), 2).toString(10);
+
+  return {
+    prefix: sprintf('%s:%s', prefix.slice(0, 4), prefix.slice(4, 8)),
+    server4: server4.address,
+    client4: client4.address,
+    flags: flagsBase2,
+    coneNat: coneNat,
+    microsoft: {
+      reserved: reserved,
+      universalLocal: universalLocal,
+      groupIndividual: groupIndividual,
+      nonce: nonce
+    },
+    udpPort: udpPort
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var Address6 = require('ip-address').Address6;
+
+var address = new Address6('2001:0:ce49:7601:e866:efff:62c3:fffe');
+
+address.isValid(); // true
+
+var teredo = address.<span class="apidocCodeKeywordSpan">inspectTeredo</span>();
+
+teredo.client4;    // '157.60.0.1'
+```
+
+### Features
+
+- Parsing of all IPv6 notations
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.is4" id="apidoc.element.ip-address.Address6.prototype.is4">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>is4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">is4 = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.is6to4" id="apidoc.element.ip-address.Address6.prototype.is6to4">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>is6to4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">is6to4 = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.isCanonical" id="apidoc.element.ip-address.Address6.prototype.isCanonical">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isCanonical
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isCanonical = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.isCorrect" id="apidoc.element.ip-address.Address6.prototype.isCorrect">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isCorrect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isCorrect = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+* Returns true if the address is correct, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+exports.isCorrect = common.<span class="apidocCodeKeywordSpan">isCorrect</span>(v6.BITS);
+
+/**
+* Returns true if the address is in the canonical form, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.isInSubnet" id="apidoc.element.ip-address.Address6.prototype.isInSubnet">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isInSubnet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isInSubnet = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* Returns true if the address is a Teredo address, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+exports.isTeredo = common.falseIfInvalid(function () {
+ return this.<span class="apidocCodeKeywordSpan">isInSubnet</span>(new this.constructor('2001::/32'));
+});
+
+/**
+* Returns true if the address is a 6to4 address, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.isLinkLocal" id="apidoc.element.ip-address.Address6.prototype.isLinkLocal">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isLinkLocal
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isLinkLocal = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.isLoopback" id="apidoc.element.ip-address.Address6.prototype.isLoopback">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isLoopback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isLoopback = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.isMulticast" id="apidoc.element.ip-address.Address6.prototype.isMulticast">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isMulticast
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isMulticast = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.isTeredo" id="apidoc.element.ip-address.Address6.prototype.isTeredo">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isTeredo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isTeredo = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.isValid" id="apidoc.element.ip-address.Address6.prototype.isValid">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>isValid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValid = function () {
+  return this.valid;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Examples
+
+```js
+var Address6 = require('ip-address').Address6;
+
+var address = new Address6('2001:0:ce49:7601:e866:efff:62c3:fffe');
+
+address.<span class="apidocCodeKeywordSpan">isValid</span>(); // true
+
+var teredo = address.inspectTeredo();
+
+teredo.client4;    // '157.60.0.1'
+```
+
+### Features
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.link" id="apidoc.element.ip-address.Address6.prototype.link">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>link
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">link = function (options) {
+  if (!options) {
+    options = {};
+  }
+
+  if (options.className === undefined) {
+    options.className = '';
+  }
+
+  if (options.prefix === undefined) {
+    options.prefix = '/#address=';
+  }
+
+  if (options.v4 === undefined) {
+    options.v4 = false;
+  }
+
+  var formFunction = this.correctForm;
+
+  if (options.v4) {
+    formFunction = this.to4in6;
+  }
+
+  if (options.className) {
+    return sprintf('&lt;a href="%1$s%2$s" class="%3$s"&gt;%2$s&lt;/a&gt;',
+      options.prefix, formFunction.call(this), options.className);
+  }
+
+  return sprintf('&lt;a href="%1$s%2$s"&gt;%2$s&lt;/a&gt;', options.prefix,
+    formFunction.call(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.mask" id="apidoc.element.ip-address.Address6.prototype.mask">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>mask
+        <span class="apidocSignatureSpan">(optionalMask)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mask = function (optionalMask) {
+  if (optionalMask === undefined) {
+    optionalMask = this.subnetMask;
+  }
+
+  return this.getBitsBase2(0, optionalMask);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+exports.isInSubnet = falseIfInvalid(function (address) {
+  if (this.subnetMask &lt; address.subnetMask) {
+    return false;
+  }
+
+  if (this.<span class="apidocCodeKeywordSpan">mask</span>(address.subnetMask) === address.mask()) {
+    return true;
+  }
+
+  return false;
+});
+
+exports.isCorrect = function (defaultBits) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.microsoftTranscription" id="apidoc.element.ip-address.Address6.prototype.microsoftTranscription">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>microsoftTranscription
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">microsoftTranscription = function () {
+  return sprintf('%s.ipv6-literal.net',
+    this.correctForm().replace(/:/g, '-'));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.parse" id="apidoc.element.ip-address.Address6.prototype.parse">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>parse
+        <span class="apidocSignatureSpan">(address)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (address) {
+  address = this.parse4in6(address);
+
+  if (this.error) {
+    return null;
+  }
+
+  var badCharacters = address.match(constants6.RE_BAD_CHARACTERS);
+
+  if (badCharacters) {
+    this.valid = false;
+    this.error = sprintf('Bad character%s detected in address: %s',
+      badCharacters.length &gt; 1 ? 's' : '', badCharacters.join(''));
+
+    this.parseError = address.replace(constants6.RE_BAD_CHARACTERS,
+      '&lt;span class="parse-error"&gt;$1&lt;/span&gt;');
+
+    return null;
+  }
+
+  var badAddress = address.match(constants6.RE_BAD_ADDRESS);
+
+  if (badAddress) {
+    this.valid = false;
+    this.error = sprintf('Address failed regex: %s', badAddress.join(''));
+
+    this.parseError = address.replace(constants6.RE_BAD_ADDRESS,
+      '&lt;span class="parse-error"&gt;$1&lt;/span&gt;');
+
+    return null;
+  }
+
+  var groups = [];
+
+  var halves = address.split('::');
+
+  if (halves.length === 2) {
+    var first = halves[0].split(':');
+    var last = halves[1].split(':');
+
+    if (first.length === 1 &amp;&amp;
+      first[0] === '') {
+      first = [];
+    }
+
+    if (last.length === 1 &amp;&amp;
+      last[0] === '') {
+      last = [];
+    }
+
+    var remaining = this.groups - (first.length + last.length);
+
+    if (!remaining) {
+      this.valid = false;
+      this.error = 'Error parsing groups';
+
+      return null;
+    }
+
+    this.elidedGroups = remaining;
+
+    this.elisionBegin = first.length;
+    this.elisionEnd = first.length + this.elidedGroups;
+
+    first.forEach(function (group) {
+      groups.push(group);
+    });
+
+    for (var i = 0; i &lt; remaining; i++) {
+      groups.push(0);
+    }
+
+    last.forEach(function (group) {
+      groups.push(group);
+    });
+  } else if (halves.length === 1) {
+    groups = address.split(':');
+
+    this.elidedGroups = 0;
+  } else {
+    this.valid = false;
+    this.error = 'Too many :: groups found';
+
+    return null;
+  }
+
+  groups = groups.map(function (g) {
+    return sprintf('%x', parseInt(g, 16));
+  });
+
+  if (groups.length !== this.groups) {
+    this.valid = false;
+    this.error = 'Incorrect number of groups found';
+
+    return null;
+  }
+
+  this.valid = true;
+
+  return groups;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.parse4in6" id="apidoc.element.ip-address.Address6.prototype.parse4in6">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>parse4in6
+        <span class="apidocSignatureSpan">(address)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse4in6 = function (address) {
+  var groups = address.split(':');
+  var lastGroup = groups.slice(-1)[0];
+
+  var address4 = lastGroup.match(constants4.RE_ADDRESS);
+
+  if (address4) {
+    var temp4 = new Address4(address4[0]);
+
+    for (var i = 0; i &lt; temp4.groups; i++) {
+      if (/^0[0-9]+/.test(temp4.parsedAddress[i])) {
+        this.valid = false;
+        this.error = 'IPv4 addresses can not have leading zeroes.';
+
+        this.parseError = address.replace(constants4.RE_ADDRESS,
+          temp4.parsedAddress.map(spanLeadingZeroes4).join('.'));
+
+        return null;
+      }
+    }
+
+    this.v4 = true;
+
+    groups[groups.length - 1] = temp4.toGroup6();
+
+    address = groups.join(':');
+  }
+
+  return address;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.possibleSubnets" id="apidoc.element.ip-address.Address6.prototype.possibleSubnets">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>possibleSubnets
+        <span class="apidocSignatureSpan">(optionalSubnetSize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">possibleSubnets = function (optionalSubnetSize) {
+  if (optionalSubnetSize === undefined) {
+    optionalSubnetSize = 128;
+  }
+
+  var availableBits = constants6.BITS - this.subnetMask;
+  var subnetBits = Math.abs(optionalSubnetSize - constants6.BITS);
+  var subnetPowers = availableBits - subnetBits;
+
+  if (subnetPowers &lt; 0) {
+    return '0';
+  }
+
+  return addCommas(new BigInteger('2', 10).pow(subnetPowers).toString(10));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.regularExpression" id="apidoc.element.ip-address.Address6.prototype.regularExpression">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>regularExpression
+        <span class="apidocSignatureSpan">(optionalSubstring)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">regularExpression = function (optionalSubstring) {
+  return new RegExp(this.regularExpressionString(optionalSubstring), 'i');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.regularExpressionString" id="apidoc.element.ip-address.Address6.prototype.regularExpressionString">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>regularExpressionString
+        <span class="apidocSignatureSpan">(optionalSubString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">regularExpressionString = function (optionalSubString) {
+  if (optionalSubString === undefined) {
+    optionalSubString = false;
+  }
+
+  var output = [];
+
+  // TODO: revisit why this is necessary
+  var address6 = new this.constructor(this.correctForm());
+
+  if (address6.elidedGroups === 0) {
+    // The simple case
+    output.push(simpleRegularExpression(address6.parsedAddress));
+  } else if (address6.elidedGroups === v6.GROUPS) {
+    // A completely elided address
+    output.push(possibleElisions(v6.GROUPS));
+  } else {
+    // A partially elided address
+    var halves = address6.address.split('::');
+
+    if (halves[0].length) {
+      output.push(simpleRegularExpression(halves[0].split(':')));
+    }
+
+    output.push(possibleElisions(address6.elidedGroups,
+                         halves[0].length !== 0,
+                         halves[1].length !== 0));
+
+    if (halves[1].length) {
+      output.push(simpleRegularExpression(halves[1].split(':')));
+    }
+
+    output = [output.join(':')];
+  }
+
+  if (!optionalSubString) {
+    output = [].concat('(?=^|\\b|[^\\w\\:])(', output, ')(?=[^\\w\\:]|\\b|$)');
+  }
+
+  return output.join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * variations of this address.
+ * @memberof Address6
+ * @instance
+ * @param {string} optionalSubString
+ * @returns {RegExp}
+ */
+exports.regularExpression = function (optionalSubstring) {
+  return new RegExp(this.<span class="apidocCodeKeywordSpan">regularExpressionString</span>(optionalSubstring), 'i');
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.reverseForm" id="apidoc.element.ip-address.Address6.prototype.reverseForm">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>reverseForm
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reverseForm = function (options) {
+  if (!options) {
+    options = {};
+  }
+
+  var characters = Math.floor(this.subnetMask / 4);
+
+  var reversed = this.canonicalForm()
+    .replace(/:/g, '')
+    .split('')
+    .slice(0, characters)
+    .reverse()
+    .join('.');
+
+  if (characters &gt; 0) {
+    if (options.omitSuffix) {
+      return reversed;
+    }
+
+    return sprintf('%s.ip6.arpa.', reversed);
+  }
+
+  if (options.omitSuffix) {
+    return '';
+  }
+
+  return 'ip6.arpa.';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.six2four" id="apidoc.element.ip-address.Address6.prototype.six2four">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>six2four
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.startAddress" id="apidoc.element.ip-address.Address6.prototype.startAddress">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>startAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startAddress = function () {
+  var startAddress = new BigInteger(this.mask() +
+    repeat(0, constants6.BITS - this.subnetMask), 2);
+
+  return Address6.fromBigInteger(startAddress);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.teredo" id="apidoc.element.ip-address.Address6.prototype.teredo">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>teredo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.to4" id="apidoc.element.ip-address.Address6.prototype.to4">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>to4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">to4 = function () {
+  var binary = this.binaryZeroPad().split('');
+
+  return Address4.fromHex(new BigInteger(binary.slice(96, 128)
+    .join(''), 2).toString(16));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.to4in6" id="apidoc.element.ip-address.Address6.prototype.to4in6">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>to4in6
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">to4in6 = function () {
+  var address4 = this.to4();
+  var address6 = new Address6(this.parsedAddress.slice(0, 6).join(':'), 6);
+
+  var correct = address6.correctForm();
+
+  var infix = '';
+
+  if (!/:$/.test(correct)) {
+    infix = ':';
+  }
+
+  return address6.correctForm() + infix + address4.address;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.to6to4" id="apidoc.element.ip-address.Address6.prototype.to6to4">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>to6to4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">to6to4 = function () {
+  if (!this.is4()) {
+    return null;
+  }
+
+  var addr6to4 = [
+    '2002',
+    this.getBitsBase16(96, 112),
+    this.getBitsBase16(112, 128),
+    '',
+    '/16'
+  ].join(':');
+
+  return new Address6(addr6to4);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.toByteArray" id="apidoc.element.ip-address.Address6.prototype.toByteArray">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>toByteArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toByteArray = function () {
+  var byteArray = this.bigInteger().toByteArray();
+
+  // work around issue where `toByteArray` returns a leading 0 element
+  if (byteArray.length === 17 &amp;&amp; byteArray[0] === 0) {
+    return byteArray.slice(1);
+  }
+
+  return byteArray;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.toUnsignedByteArray" id="apidoc.element.ip-address.Address6.prototype.toUnsignedByteArray">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>toUnsignedByteArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toUnsignedByteArray = function () {
+  return this.toByteArray().map(unsignByte);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.tov4" id="apidoc.element.ip-address.Address6.prototype.tov4">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>tov4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.Address6.prototype.v4inv6" id="apidoc.element.ip-address.Address6.prototype.v4inv6">
+        function <span class="apidocSignatureSpan">ip-address.Address6.prototype.</span>v4inv6
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deprecated() {
+  warned = exports.printDeprecationMessage(msg, warned, deprecated);
+  if (new.target) {
+    return Reflect.construct(fn, arguments, new.target);
+  }
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ip-address.attributes" id="apidoc.module.ip-address.attributes">module ip-address.attributes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.attributes.is4" id="apidoc.element.ip-address.attributes.is4">
+        function <span class="apidocSignatureSpan">ip-address.attributes.</span>is4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">is4 = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.attributes.is6to4" id="apidoc.element.ip-address.attributes.is6to4">
+        function <span class="apidocSignatureSpan">ip-address.attributes.</span>is6to4
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">is6to4 = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.attributes.isCanonical" id="apidoc.element.ip-address.attributes.isCanonical">
+        function <span class="apidocSignatureSpan">ip-address.attributes.</span>isCanonical
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isCanonical = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.attributes.isCorrect" id="apidoc.element.ip-address.attributes.isCorrect">
+        function <span class="apidocSignatureSpan">ip-address.attributes.</span>isCorrect
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isCorrect = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+* Returns true if the address is correct, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+exports.isCorrect = common.<span class="apidocCodeKeywordSpan">isCorrect</span>(v6.BITS);
+
+/**
+* Returns true if the address is in the canonical form, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.attributes.isInSubnet" id="apidoc.element.ip-address.attributes.isInSubnet">
+        function <span class="apidocSignatureSpan">ip-address.attributes.</span>isInSubnet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isInSubnet = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* Returns true if the address is a Teredo address, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+exports.isTeredo = common.falseIfInvalid(function () {
+ return this.<span class="apidocCodeKeywordSpan">isInSubnet</span>(new this.constructor('2001::/32'));
+});
+
+/**
+* Returns true if the address is a 6to4 address, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.attributes.isLinkLocal" id="apidoc.element.ip-address.attributes.isLinkLocal">
+        function <span class="apidocSignatureSpan">ip-address.attributes.</span>isLinkLocal
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isLinkLocal = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.attributes.isLoopback" id="apidoc.element.ip-address.attributes.isLoopback">
+        function <span class="apidocSignatureSpan">ip-address.attributes.</span>isLoopback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isLoopback = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.attributes.isMulticast" id="apidoc.element.ip-address.attributes.isMulticast">
+        function <span class="apidocSignatureSpan">ip-address.attributes.</span>isMulticast
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isMulticast = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.attributes.isTeredo" id="apidoc.element.ip-address.attributes.isTeredo">
+        function <span class="apidocSignatureSpan">ip-address.attributes.</span>isTeredo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isTeredo = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.attributes.isValid" id="apidoc.element.ip-address.attributes.isValid">
+        function <span class="apidocSignatureSpan">ip-address.attributes.</span>isValid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValid = function () {
+  return this.valid;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Examples
+
+```js
+var Address6 = require('ip-address').Address6;
+
+var address = new Address6('2001:0:ce49:7601:e866:efff:62c3:fffe');
+
+address.<span class="apidocCodeKeywordSpan">isValid</span>(); // true
+
+var teredo = address.inspectTeredo();
+
+teredo.client4;    // '157.60.0.1'
+```
+
+### Features
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ip-address.common" id="apidoc.module.ip-address.common">module ip-address.common</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.common.falseIfInvalid" id="apidoc.element.ip-address.common.falseIfInvalid">
+        function <span class="apidocSignatureSpan">ip-address.common.</span>falseIfInvalid
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">falseIfInvalid = function (fn) {
+  return function () {
+    if (!this.valid) {
+      return false;
+    }
+
+    return fn.apply(this, arguments);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+* Returns true if the address is in the canonical form, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+exports.isCanonical = common.<span class="apidocCodeKeywordSpan">falseIfInvalid</span>(function () {
+ return this.addressMinusSuffix === this.canonicalForm();
+});
+
+/**
+* Returns true if the address is a link local address, false otherwise
+* @memberof Address6
+* @instance
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.common.isCorrect" id="apidoc.element.ip-address.common.isCorrect">
+        function <span class="apidocSignatureSpan">ip-address.common.</span>isCorrect
+        <span class="apidocSignatureSpan">(defaultBits)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isCorrect = function (defaultBits) {
+  return falseIfInvalid(function () {
+    if (this.addressMinusSuffix !== this.correctForm()) {
+      return false;
+    }
+
+    if (this.subnetMask === defaultBits &amp;&amp; !this.parsedSubnet) {
+      return true;
+    }
+
+    return this.parsedSubnet === String(this.subnetMask);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+* Returns true if the address is correct, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+exports.isCorrect = common.<span class="apidocCodeKeywordSpan">isCorrect</span>(v6.BITS);
+
+/**
+* Returns true if the address is in the canonical form, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.common.isInSubnet" id="apidoc.element.ip-address.common.isInSubnet">
+        function <span class="apidocSignatureSpan">ip-address.common.</span>isInSubnet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isInSubnet = function () {
+  if (!this.valid) {
+    return false;
+  }
+
+  return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* Returns true if the address is a Teredo address, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+*/
+exports.isTeredo = common.falseIfInvalid(function () {
+ return this.<span class="apidocCodeKeywordSpan">isInSubnet</span>(new this.constructor('2001::/32'));
+});
+
+/**
+* Returns true if the address is a 6to4 address, false otherwise
+* @memberof Address6
+* @instance
+* @returns {boolean}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ip-address.helpers" id="apidoc.module.ip-address.helpers">module ip-address.helpers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.helpers.simpleGroup" id="apidoc.element.ip-address.helpers.simpleGroup">
+        function <span class="apidocSignatureSpan">ip-address.helpers.</span>simpleGroup
+        <span class="apidocSignatureSpan">(addressString, offset)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">simpleGroup = function (addressString, offset) {
+  var groups = addressString.split(':');
+
+  if (!offset) {
+    offset = 0;
+  }
+
+  return groups.map(function (g, i) {
+    if (/group-v4/.test(g)) {
+      return g;
+    }
+
+    return sprintf('&lt;span class="hover-group group-%d"&gt;%s&lt;/span&gt;',
+      i + offset,
+      spanLeadingZeroesSimple(g));
+  }).join(':');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      '&lt;span class="hover-group group-v4 group-7"&gt;%s&lt;/span&gt;',
+      segments.slice(0, 2).join('.'),
+      segments.slice(2, 4).join('.')));
+}
+
+if (this.elidedGroups === 0) {
+  // The simple case
+  return helpers.<span class="apidocCodeKeywordSpan">simpleGroup</span>(this.address);
+}
+
+// The elided case
+var output = [];
+
+var halves = this.address.split('::');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.helpers.spanAll" id="apidoc.element.ip-address.helpers.spanAll">
+        function <span class="apidocSignatureSpan">ip-address.helpers.</span>spanAll
+        <span class="apidocSignatureSpan">(s, optionalOffset)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spanAll = function (s, optionalOffset) {
+  if (optionalOffset === undefined) {
+    optionalOffset = 0;
+  }
+
+  var letters = s.split('');
+
+  return letters.map(function (n, i) {
+    return sprintf('&lt;span class="digit value-%s position-%d"&gt;%s&lt;/span&gt;', n,
+      i + optionalOffset,
+      spanAllZeroes(n)); // XXX Use #base-2 .value-0 instead?
+  }).join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.helpers.spanAllZeroes" id="apidoc.element.ip-address.helpers.spanAllZeroes">
+        function <span class="apidocSignatureSpan">ip-address.helpers.</span>spanAllZeroes
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spanAllZeroes = function (s) {
+  return s.replace(/(0+)/g, '&lt;span class="zero"&gt;$1&lt;/span&gt;');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.helpers.spanLeadingZeroes" id="apidoc.element.ip-address.helpers.spanLeadingZeroes">
+        function <span class="apidocSignatureSpan">ip-address.helpers.</span>spanLeadingZeroes
+        <span class="apidocSignatureSpan">(address)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">spanLeadingZeroes = function (address) {
+  var groups = address.split(':');
+
+  return groups.map(function (g) {
+    return spanLeadingZeroesSimple(g);
+  }).join(':');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ip-address.html" id="apidoc.module.ip-address.html">module ip-address.html</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.html.group" id="apidoc.element.ip-address.html.group">
+        function <span class="apidocSignatureSpan">ip-address.html.</span>group
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">group = function () {
+  var address4 = this.address.match(constants4.RE_ADDRESS);
+  var i;
+
+  if (address4) {
+    // The IPv4 case
+    var segments = address4[0].split('.');
+
+    this.address = this.address.replace(constants4.RE_ADDRESS,
+      sprintf('&lt;span class="hover-group group-v4 group-6"&gt;%s&lt;/span&gt;' +
+        '.' +
+        '&lt;span class="hover-group group-v4 group-7"&gt;%s&lt;/span&gt;',
+        segments.slice(0, 2).join('.'),
+        segments.slice(2, 4).join('.')));
+  }
+
+  if (this.elidedGroups === 0) {
+    // The simple case
+    return helpers.simpleGroup(this.address);
+  }
+
+  // The elided case
+  var output = [];
+
+  var halves = this.address.split('::');
+
+  if (halves[0].length) {
+    output.push(helpers.simpleGroup(halves[0]));
+  } else {
+    output.push('');
+  }
+
+  var classes = ['hover-group'];
+
+  for (i = this.elisionBegin;
+       i &lt; this.elisionBegin + this.elidedGroups; i++) {
+    classes.push(sprintf('group-%d', i));
+  }
+
+  output.push(sprintf('&lt;span class="%s"&gt;&lt;/span&gt;', classes.join(' ')));
+
+  if (halves[1].length) {
+    output.push(helpers.simpleGroup(halves[1], this.elisionEnd));
+  } else {
+    output.push('');
+  }
+
+  return output.join(':');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.html.href" id="apidoc.element.ip-address.html.href">
+        function <span class="apidocSignatureSpan">ip-address.html.</span>href
+        <span class="apidocSignatureSpan">(optionalPort)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">href = function (optionalPort) {
+  if (optionalPort === undefined) {
+    optionalPort = '';
+  } else {
+    optionalPort = sprintf(':%s', optionalPort);
+  }
+
+  return sprintf('http://[%s]%s/', this.correctForm(), optionalPort);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.html.link" id="apidoc.element.ip-address.html.link">
+        function <span class="apidocSignatureSpan">ip-address.html.</span>link
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">link = function (options) {
+  if (!options) {
+    options = {};
+  }
+
+  if (options.className === undefined) {
+    options.className = '';
+  }
+
+  if (options.prefix === undefined) {
+    options.prefix = '/#address=';
+  }
+
+  if (options.v4 === undefined) {
+    options.v4 = false;
+  }
+
+  var formFunction = this.correctForm;
+
+  if (options.v4) {
+    formFunction = this.to4in6;
+  }
+
+  if (options.className) {
+    return sprintf('&lt;a href="%1$s%2$s" class="%3$s"&gt;%2$s&lt;/a&gt;',
+      options.prefix, formFunction.call(this), options.className);
+  }
+
+  return sprintf('&lt;a href="%1$s%2$s"&gt;%2$s&lt;/a&gt;', options.prefix,
+    formFunction.call(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.ip-address.regular_expressions" id="apidoc.module.ip-address.regular_expressions">module ip-address.regular_expressions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.regular_expressions.regularExpression" id="apidoc.element.ip-address.regular_expressions.regularExpression">
+        function <span class="apidocSignatureSpan">ip-address.regular_expressions.</span>regularExpression
+        <span class="apidocSignatureSpan">(optionalSubstring)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">regularExpression = function (optionalSubstring) {
+  return new RegExp(this.regularExpressionString(optionalSubstring), 'i');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.ip-address.regular_expressions.regularExpressionString" id="apidoc.element.ip-address.regular_expressions.regularExpressionString">
+        function <span class="apidocSignatureSpan">ip-address.regular_expressions.</span>regularExpressionString
+        <span class="apidocSignatureSpan">(optionalSubString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">regularExpressionString = function (optionalSubString) {
+  if (optionalSubString === undefined) {
+    optionalSubString = false;
+  }
+
+  var output = [];
+
+  // TODO: revisit why this is necessary
+  var address6 = new this.constructor(this.correctForm());
+
+  if (address6.elidedGroups === 0) {
+    // The simple case
+    output.push(simpleRegularExpression(address6.parsedAddress));
+  } else if (address6.elidedGroups === v6.GROUPS) {
+    // A completely elided address
+    output.push(possibleElisions(v6.GROUPS));
+  } else {
+    // A partially elided address
+    var halves = address6.address.split('::');
+
+    if (halves[0].length) {
+      output.push(simpleRegularExpression(halves[0].split(':')));
+    }
+
+    output.push(possibleElisions(address6.elidedGroups,
+                         halves[0].length !== 0,
+                         halves[1].length !== 0));
+
+    if (halves[1].length) {
+      output.push(simpleRegularExpression(halves[1].split(':')));
+    }
+
+    output = [output.join(':')];
+  }
+
+  if (!optionalSubString) {
+    output = [].concat('(?=^|\\b|[^\\w\\:])(', output, ')(?=[^\\w\\:]|\\b|$)');
+  }
+
+  return output.join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * variations of this address.
+ * @memberof Address6
+ * @instance
+ * @param {string} optionalSubString
+ * @returns {RegExp}
+ */
+exports.regularExpression = function (optionalSubstring) {
+  return new RegExp(this.<span class="apidocCodeKeywordSpan">regularExpressionString</span>(optionalSubstring), 'i');
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
